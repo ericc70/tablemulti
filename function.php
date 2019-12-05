@@ -1,9 +1,8 @@
 <?php
 function afficheTable($table){
-for($i=0; $i<=10; $i++){
-    $result=(int)$table*$i;
-    echo $i .' * '. (int)$table .' = ' . $result .'<br />';}
-
+    for($i=0; $i<=10; $i++){
+        $result=(int)$table*$i;
+        echo $i .' * '. (int)$table .' = ' . $result .'<br />';}
 
 }
 
@@ -23,4 +22,20 @@ function revisTable($choix, $n=1){
     //session_start();
   
 
+}
+
+function secur($dataEnt ,$dataMin, $dataMax, $dataType){
+
+        if ($dataType == 1) //is int
+        {
+            $dataEnt=(int)$dataEnt;
+            if($dataEnt >= $dataMin && $dataEnt <= $dataMax)
+            {
+                return $dataEnt;
+            }
+            else
+            {
+                return 0;
+            }
+        }
 }
